@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/card.js"></script>
+</head>
+    <body>
+       <!--#include virtual="header.html" -->        
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+            <form id="myForm">
+                <label for="amount">Amount:</label>
+                <input id="amount" name="amount">
+                <br>
+                <label for="title">Title:</label>
+                <input id="title" name="title">
+                <br>
+                <label for="login">Login:</label>
+                <input id="login" name="login">
+            </form>
+            <p>
+            <button class="btn btn-lg btn-default" onclick="readWriteNfc()">Test NFC Read/Write</button>
+            </p>
+            <button class="btn btn-lg btn-default" onclick="clearLog()">Clear log</button>
+            <pre id="log"></pre>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <!--#include virtual="footer.html" -->
+    </body>
+</html>
