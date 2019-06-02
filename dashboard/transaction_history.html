@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Amper Volt Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#3A3052" />
+
+
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://kit.fontawesome.com/5281750cba.js"></script>
+
+</head>
+
+<body onload="transactionHistory()">
+
+    <div class="grid-container">
+
+        <header class="header">
+            <div class="header_search">Search...</div>
+            <div class="header_avatar">Face</div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+
+        <aside class="sidenav">
+            <div class="sidenav_close-icon">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul class="sidenav_list">
+                <li class="sidenav_list-item"><a href="transaction_history.html">Transaction History</a></li>
+                <li class="sidenav_list-item">New Transaction</li>
+                <li class="sidenav_list-item">Cards</li>
+                <li class="sidenav_list-item">Account Details</li>
+                <li class="sidenav_list-item">NFC Payment</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="main-header">
+                <div class="main-header_heading">Hello User</div>
+                <div class="main-header_updates">Recent Items</div>
+            </div>
+
+            <div class="main-cards" id="av-history">
+                <div class="card">
+                    <div class="card_transaction-dateblock">
+                        <p class="card_transaction-date">2019-05-10</p>
+                        <p class="card_transaction-type">transfer</p>
+                    </div>
+                    <p class="card_transaction-origin">Bill Cipher</p>
+                    <p class="card_transaction-title">Thanks for the nachos!</p>
+                    <div class="card_transaction-amount green">1243.11₱</div>
+                </div>
+
+                <div class="card">
+                    <div class="card_transaction-dateblock">
+                        <p class="card_transaction-date">2019-05-10</p>
+                        <p class="card_transaction-type">transfer</p>
+                    </div>
+                    <p class="card_transaction-origin">Yung Venuz</p>
+                    <p class="card_transaction-title">For gunz</p>
+                    <div class="card_transaction-amount red">-174.24₱</div>
+                </div>                
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer_copyright">&copy; 2019 MSMO</div>
+            <div class="footer_signature">Not a real bank - Made by two students</div>
+        </footer>
+    </div>
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

@@ -2,7 +2,6 @@
     --main-bg-gradient: linear-gradient(to bottom right, #3d3163, #1c172c);
     --main-card-gradient: linear-gradient(to top right, #3A5684, #3A5684 50%, #264271);
     --gradient-green: linear-gradient(to right, #61a864, #838206);
-    --gradient-red: linear-gradient(to right, #cf4a00, #ad6f07);
     --main-text: #F3F2FA;
 }
 
@@ -29,7 +28,7 @@ a, a:visited {
         "main"
         "footer";
     height: 100vh;
-    font-family: 'Yu Gothic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -156,52 +155,25 @@ a, a:visited {
 
 .card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     background-color: #3A5684;
     background-image: var(--main-card-gradient);
     margin-bottom: 20px;
     -webkit-column-break-inside: avoid;
-    padding: 4px 12px;
+    padding: 24px;
     box-sizing: border-box;
     border-radius: 5px;
 }
-
-
-.card_transaction-amount  {
-    font-size: 2em;    
+.card:first-child {
+    height: 485px;
 }
-
-.card_transaction-amount.green {
-    background: var(--gradient-green);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.card:nth-child(2) {
+    height: 200px;  
 }
-
-.card_transaction-amount.red {
-    background: var(--gradient-red);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.card_transaction-dateblock {
-    display: flex;
-    flex-flow: column;
-}
-
-.card_transaction-date {
-    font-size: 24px;
-    margin: 0;
-}
-
-.card_transaction-type {
-    font-size: 16px;
-    margin: 0;
-    text-transform: uppercase;
+.card:nth-child(3) {
+    height: 265px;
 }
 
 /* Tablet */
@@ -227,5 +199,7 @@ a, a:visited {
 
 /* Desktop */
 @media only screen and (min-width: 65.625em) {
-    
+    .main-cards {
+        column-count: 2;
+    }
 }
