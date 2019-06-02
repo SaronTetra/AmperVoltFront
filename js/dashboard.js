@@ -22,7 +22,7 @@ sidenavClose[0].addEventListener('click', function() {
 
 
 function transactionHistory(){
-    var login = "sarian";
+    var login = "frodo_b";
     var request = new XMLHttpRequest();
     request.open('GET', 'https://192.168.1.40:8080/users/'+ login + '/transactions', true);
     request.onload = function() {
@@ -32,14 +32,20 @@ function transactionHistory(){
           var list = document.getElementById("av-history");
         //   for (property in data){
             for( i=0; i<data.length; i++){
+                if( data[i].money < 0){
+                    moneyColor = "red";
+                }
+                else{
+                    moneyColor = "green"
+                }
                 list.innerHTML += `<div class="card">
                 <div class="card_transaction-dateblock">
                     <p class="card_transaction-date">${data[i].orderDate.substr(0,10)}</p>
                     <p class="card_transaction-type">${data[i].type}</p>
                 </div>
-                <p class="card_transaction-origin">${data[i].fromId}</p>
+                <p class="card_transaction-origin">${data[i].target}</p>
                 <p class="card_transaction-title">${data[i].title}</p>
-                <div class="card_transaction-amount green">${data[i].money}₱</div>
+                <div class="card_transaction-amount ${moneyColor}">${data[i].money}₱</div>
             </div>`
                 "<li>" +  + "  " + data[i].fromId
                 + "<br>" + data[i].money + "   " + data[i].title + "</li>" ;
