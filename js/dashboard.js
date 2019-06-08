@@ -22,9 +22,10 @@ sidenavClose[0].addEventListener('click', function() {
 
 
 function transactionHistory(){
-    var login = "frodo_b";
+    var login = "SaronTetra";
+    var account = "66619871645167812220001468";
     var request = new XMLHttpRequest();
-    request.open('GET', 'https://192.168.1.40:8080/users/'+ login + '/transactions', true);
+    request.open('GET', 'https://ampervolt.putelita.pl:8080/users/'+ login + '/' + account + '/transactions', true);
     request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!

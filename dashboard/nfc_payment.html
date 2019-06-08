@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Amper Volt Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#3A3052">
+
+
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://kit.fontawesome.com/5281750cba.js"></script>
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <header class="header">
+            <div class="header_search">User: 
+                <input type="text" name="user" id="user">
+            </div>
+            <div class="header_avatar">Face</div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+
+        <aside class="sidenav">
+            <div class="sidenav_close-icon">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul class="sidenav_list">
+                <li class="sidenav_list-item"><a href="transaction_history.html">Transaction History</a></li>
+                <li class="sidenav_list-item"><a href="nfc_payment.html">NFC Payment</a></li>
+                <li class="sidenav_list-item">Cards</li>
+                <li class="sidenav_list-item">Account Details</li>
+                <li class="sidenav_list-item">New Transaction</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="pinpad">
+                <div class="pinpad-screen">
+                   Enter amount: <br>
+                </div>
+                <div class="pinpad-keys">
+
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="1">1</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="2">2</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="3">3</button></div>
+                   
+
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="4">4</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="5">5</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="6">6</button></div>
+
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="7">7</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="8">8</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="9">9</button></div>
+                     
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="*">*</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="0">0</button></div>
+                    <div class="pinpad-key-gradient"><button class="pinpad-key-gradient-corner" type="button" value="#">#</button></div>
+
+                    <div class="pinpad-key-gradient red"><button class="pinpad-key-gradient-corner red" type="button" value="X">X</button></div>
+                    <div class="pinpad-key-gradient yellow"><button class="pinpad-key-gradient-corner yellow" type="button" value="<"><</button></div>
+                    <div class="pinpad-key-gradient green"><button class="pinpad-key-gradient-corner green" type="button" value="o">o</button></div>
+
+                </div>                
+            </div>
+            <pre id="log"></pre>
+        </main>
+
+        <footer class="footer">
+            <div class="footer_copyright">&copy; 2019 MSMO</div>
+            <div class="footer_signature">Not a real bank - Made by two students</div>
+        </footer>
+    </div>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/nfc_card.js"></script>
+</body>
+
+</html>

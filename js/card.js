@@ -11,7 +11,7 @@ function clearLog() {
 
 function processPayment(uuid) {
   const getTest = async () => {
-    const response = await fetch('https://192.168.1.40:8080/users/'+ login + '/'  + uuid + '/');
+    const response = await fetch('https://ampervolt.putelita.pl:8080/users/'+ login + '/'  + uuid + '/');
     const myJson = await response.json(); //extract JSON from the http response
     consoleLog(JSON.stringify(myJson));
   }
@@ -22,7 +22,7 @@ function processPayment(uuid) {
   var login = document.getElementById("login").value;
 
   var request = new XMLHttpRequest();
-  request.open('POST', 'https://192.168.1.40:8080/users/'+ login + '/pay', true);
+  request.open('POST', 'https://ampervolt.putelita.pl:8080/users/'+ login + '/pay', true);
   request.setRequestHeader('Content-Type', 'application/json');
   request.send(JSON.stringify({
     "uuid": uuid,
@@ -43,7 +43,7 @@ function writeTag() {
     navigator.nfc.watch(function (message) {
       navigator.nfc.push({
         url: "/custom/path",
-        records: [{ recordType: "text", data: '4ab0e21f-70b9-45d4-854d-92d607ffbb0a' }]
+        records: [{ recordType: "text", data: '99c7af9e-10ee-4a87-8b8e-7a70c913a5b8' }]
       });
       consoleLog("WRITE DONE!");
       navigator.nfc.cancelWatch();

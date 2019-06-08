@@ -3,7 +3,15 @@
     --main-card-gradient: linear-gradient(to top right, #3A5684, #3A5684 50%, #264271);
     --gradient-green: linear-gradient(to right, #61a864, #838206);
     --gradient-red: linear-gradient(to right, #cf4a00, #ad6f07);
+    --gradient-blue: linear-gradient(to right, #0090AF, #00ACB2);
+    --gradient-yellow: linear-gradient(to right, #f7cc1f, #838206);
     --main-text: #F3F2FA;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 body {
@@ -202,6 +210,158 @@ a, a:visited {
     font-size: 16px;
     margin: 0;
     text-transform: uppercase;
+}
+
+
+.pinpad {
+    padding: 1em;
+}
+
+.pinpad-screen{
+    width: 100%;
+    height: 10em;
+    color: #1c172c;
+    background-color: var(--main-text);
+    margin-bottom: 1em;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pinpad-keys{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.pinpad-keys button{
+    background: none;
+    color: var(--main-text);
+    font-size: 2em;
+    border-style: none;
+
+}
+
+
+/* rounded border gradient from */
+/* http://blog.compsoul.pl/liseblog/border-image-linear-gradient-border-radius-jako-przycisk/57.html */
+.pinpad-key-gradient {
+  border-radius: 8px;
+  color: blue;
+  display: inline-block;
+  line-height: 0px;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.2s;
+}
+
+
+
+.pinpad-key-gradient:before {
+  border: 4px solid transparent;
+  border-image: linear-gradient(to right, #00ACB2, #0090AF);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.pinpad-key-gradient-corner {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 52px;
+  overflow: hidden;
+  /* padding: 0px 32px; */
+  /* position: relative; */
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.pinpad-key-gradient-corner:before, .pinpad-key-gradient-corner:after {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  width: 10px;
+  z-index: 0;
+}
+
+.pinpad-key-gradient-corner:before {
+  border: 4px solid #00ACB2;
+  border-radius: 8px 0px 0px 8px;
+  border-right: 0px;
+  left: 0px;
+}
+
+.pinpad-key-gradient-corner:after {
+  border: 4px solid #0090AF;
+  border-radius: 0px 8px 8px 0px;
+  border-left: 0px;
+  right: 0px;
+}
+
+.pinpad-key-gradient.green:before {
+    border-image: linear-gradient(to right, #61a864, #448306);
+    border-image-slice: 1;
+}
+
+.pinpad-key-gradient-corner.green:before {
+    border-color: #61a864;
+}
+
+.pinpad-key-gradient-corner.green:after {
+    border-color: #448306;
+}
+
+
+.pinpad-key-gradient.red:before {
+    border-image: linear-gradient(to right, #cf4a00, #ad6f07);
+    border-image-slice: 1;
+}
+
+.pinpad-key-gradient-corner.red:before {
+    border-color: #cf4a00;
+}
+
+.pinpad-key-gradient-corner.red:after {
+    border-color: #ad6f07;
+}
+
+
+
+.pinpad-key-gradient.yellow:before {
+    border-image: linear-gradient(to right, #f7cc1f, #838206);
+    border-image-slice: 1;
+}
+
+.pinpad-key-gradient-corner.yellow:before {
+    border-color: #f7cc1f;
+}
+
+.pinpad-key-gradient-corner.yellow:after {
+    border-color: #838206;
+}
+
+.pinpad-key-gradient:hover {
+    background: linear-gradient(to right, #00ACB2, #0090AF);
+}
+
+.pinpad-key-gradient.green:hover {
+    background: linear-gradient(to right, #61a864, #448306);
+}
+.pinpad-key-gradient.red:hover {
+    background: linear-gradient(to right, #cf4a00, #ad6f07);
+}
+.pinpad-key-gradient.yellow:hover {
+    background: linear-gradient(to right, #f7cc1f, #838206);
 }
 
 /* Tablet */
