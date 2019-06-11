@@ -23,15 +23,16 @@ sidenavClose[0].addEventListener('click', function() {
 
 function transactionHistory(){
     var login = "SaronTetra";
-    var account = "66619871645167812220001468";
+    var account = "66619871643175169398274878";
     var request = new XMLHttpRequest();
-    request.open('GET', 'https://ampervolt.putelita.pl:8080/users/'+ login + '/' + account + '/transactions', true);
+    request.open('GET', 'https://ampervoltapi.putelita.pl:8080/users/'+ login + '/' + account + '/transactions', true);
     request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
           var data = JSON.parse(request.responseText);
           var list = document.getElementById("av-history");
         //   for (property in data){
+            console.log(JSON.stringify(data,null,4));
             for( i=0; i<data.length; i++){
                 if( data[i].money < 0){
                     moneyColor = "red";
@@ -42,7 +43,7 @@ function transactionHistory(){
                 list.innerHTML += `<div class="card">
                 <div class="card_transaction-dateblock">
                     <p class="card_transaction-date">${data[i].orderDate.substr(0,10)}</p>
-                    <p class="card_transaction-type">${data[i].type}</p>
+                    <p class="card_transaction-type">${data[i].type.name}</p>
                 </div>
                 <p class="card_transaction-origin">${data[i].target}</p>
                 <p class="card_transaction-title">${data[i].title}</p>
