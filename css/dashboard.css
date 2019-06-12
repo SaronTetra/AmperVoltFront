@@ -196,6 +196,13 @@ a, a:visited {
     -webkit-text-fill-color: transparent;
 }
 
+.card_transaction-amount.blue {
+    background: var(--gradient-blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .card_transaction-dateblock {
     display: flex;
     flex-flow: column;
